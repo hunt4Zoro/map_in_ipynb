@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My Map</title>
+  
+  <!-- Load leaflet.js library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  
+  <style>
+    #map {
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My Map</h1>
+
+  <div id="map"></div>
+
+  <script>
+    // Find the div element
+    var mapDiv = document.getElementById("map");
+
+    // Set its innerHTML to the contents of the Folium-generated HTML file
+    mapDiv.innerHTML = document.querySelector("#map").import.body.innerHTML;
+  </script>
+
+  <!-- Load Folium-generated HTML file -->
+  <script src="my_map.html"></script>
+
+</body>
+
+</html>
